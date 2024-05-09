@@ -1,0 +1,440 @@
+/* Estilização do corpo */
+body {
+    background-image: url("https://img.freepik.com/fotos-premium/estrelas-e-galaxia-espaco-ceu-noite-universo-preto-fundo-estrelado-de-starfield-brilhante_146539-338.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  /* Menu */
+  
+  #menu {
+  
+    margin-right: 90%;
+    margin-top: -45%;
+    z-index: 2;
+  }
+  .teste {
+    height: 0px;
+    opacity: 0;
+    margin-left: -16.5px;
+  }
+  
+  .dropdown-item {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .dropdown-divider {
+    background: white;
+  }
+  
+  #bot {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+  }
+  
+  .hamburger:hover{
+    .teste {
+        opacity: 1;
+        height: 100%;
+        position: absolute;
+        margin-top: 15px;
+    }
+  }
+  .dropdown {
+    box-sizing: border-box;
+  }
+  li {
+    list-style: none;
+  }
+  
+  .hamburger {
+    cursor: pointer;
+  }
+  
+  .hamburger input {
+    display: none;
+  }
+  
+  .hamburger svg {
+    /* The size of the SVG defines the overall size */
+    height: 3em;
+    /* Define the transition for transforming the SVG */
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line {
+    fill: none;
+    stroke: rgb(255, 255, 255);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    /* Define the transition for transforming the Stroke */
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line-top-bottom {
+    stroke-dasharray: 12 63;
+  }
+  
+  .hamburger input:checked + svg {
+    transform: rotate(-45deg);
+  }
+  
+  .hamburger input:checked + svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset:-32.42;
+  }
+  
+  
+  /* Estilos para o botão */
+  .button {
+    z-index: 1000;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    margin-top: -45%;
+    margin-right: 70%;
+    border: 2px solid white;
+  }
+  
+  /* Estilo quando o botão está em foco */
+  .button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5);
+  }
+  
+  /* Estilo quando o botão é pressionado */
+  .button:active {
+    background-color: transparent;
+  }
+  
+  /* Estilo quando o botão está marcado (animando) */
+  #animateButton:checked + .button {
+    background-color: transparent;
+  }
+  
+  /* Estilo para o elemento animado */
+  #linha1 {
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    opacity: 0; /* Começa com opacidade zero */
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.501);
+  }
+  
+  /* Aplica a animação quando o botão é marcado */
+  #animateButton:checked ~ .animatedElement {
+    animation: aparecer 3s forwards; /* Animação de aparecer com duração de 3s */
+  }
+  
+  @keyframes aparecer {
+    0% { opacity: 0; } /* Começa com opacidade zero */
+    100% { opacity: 1; } /* Termina com opacidade total */
+  }
+  
+  
+  
+  
+  
+  /* Nyan cat */
+  .gatinho {
+    width: 580px;
+    height: 150px;
+    background-color: transparent;
+    animation: gatinho 10s linear infinite;
+    background-image: url("img/gatinho.gif");
+    position: absolute;
+    margin-top: -900px;
+  }
+  
+  @keyframes gatinho {
+    0% {
+      transform: translateX(-4000px);
+    }
+    100% {
+      transform: translateX(2900px);
+    }
+  }
+  
+  /* Nave perseguida */
+  .nave1 {
+    width: 180px;
+    height: 180px;
+    background-color: transparent;
+    animation: nave1 10s linear infinite;
+    background-image: url("img/teste.gif");
+    position: absolute;
+    margin-top: -900px;
+  }
+  
+  @keyframes nave1 {
+    0% {
+      transform: translateX(-3500px);
+    }
+    100% {
+      transform: translateX(3400px);
+    }
+  }
+  
+  
+  /* Comando para deixar os planetas redondinhos */
+  .planeta {
+    position: absolute;
+    background-color: #000000;
+    border-radius: 50%;
+  }
+  
+  
+  /* Sol */
+  .sol {
+    width: 180px;
+    height: 180px;
+    background-color: transparent;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 10;
+    background-image: url("img/sol.png");
+    /* deixa a imagem centralizada */
+    background-position: center;
+    /* para encaixar a imagem certinha, fica proporcional */
+    background-size: cover;
+  }
+  
+  
+  
+  /* Mercurio */
+  .mercurio {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    animation: mercurio 4s linear infinite;
+    background-image: url("img/mercurio.png");
+    background-size: cover;
+  }
+  
+  
+  
+  
+  
+  @keyframes mercurio {
+    0% {
+    transform: rotate(0deg) translate(120px, 0);
+    }
+    100% {
+    transform: rotate(360deg) translate(120px, 0);
+    }
+  }
+  
+  /* Venus */
+  .venus {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    animation: venus 5s linear infinite;
+    background-image: url("img/venus.png");
+    background-size: cover;
+  }
+  
+  #linha2 {
+    width: 320px;
+    height: 320px;
+    position: absolute;
+    opacity: 0;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid rgba(218, 121, 57, 0.5);
+  }
+  
+  @keyframes venus {
+    0% {
+    transform: rotate(0deg) translate(160px, 0);
+    }
+    100% {
+    transform: rotate(360deg) translate(160px, 0);
+    }
+  }
+  
+  /* Terra */
+  .terra {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    animation: terra 6s linear infinite;
+    background-image: url("img/terra.png");
+    background-size: cover;
+  }
+  
+  #linha3 {
+    width: 430px;
+    height: 430px;
+    position: absolute;
+    background-color: transparent;
+    opacity: 0;
+    border-radius: 50%;
+    border: 2px solid rgba(73, 163, 215, 0.498); }
+  
+  @keyframes terra {
+    0% {
+    transform: rotate(0deg) translate(215px, 0);
+    }
+    100% {
+    transform: rotate(360deg) translate(215px, 0);
+    }
+  }
+  
+  /* Marte */
+  .marte {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    animation: marte 7s linear infinite;
+    background-image: url("img/marte.png");
+    background-size: cover;
+  }
+  
+  #linha4 {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    background-color: transparent;
+    opacity: 0;
+    border-radius: 50%;
+    border: 2px solid rgba(204, 155, 50, 0.501); }
+  
+  @keyframes marte {
+    0% {
+    transform: rotate(0deg) translate(300px, 0);
+    }
+    100% {
+    transform: rotate(360deg) translate(300px, 0);
+    }
+  }
+  
+  /* Jupiter */
+  .jupiter {
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+    animation: jupiter 8s linear infinite;
+    background-image: url("img/jupiter.png");
+    background-size: cover;
+  }
+  
+  #linha5 {
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    background-color: transparent;
+    opacity: 0;
+    border-radius: 50%;
+    border: 2px solid rgba(254, 173, 125, 0.498); }
+  
+  @keyframes jupiter {
+    0% {
+    transform: rotate(0deg) translate(400px, 0);
+    }
+    100% {
+    transform: rotate(360deg) translate(400px, 0);
+    }
+  }
+  
+  /* Saturno */
+  .saturno {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    animation: saturno 9s linear infinite;
+    background-image: url("img/saturno.png");
+    background-size: cover;
+  }
+  
+  #linha6 {
+    width: 1100px;
+    height: 1100px;
+    position: absolute;
+    background-color: transparent;
+    opacity: 0;
+    border-radius: 50%;
+    border: 2px solid rgba(211, 195, 131, 0.498); }
+  
+  
+  @keyframes saturno {
+    0% {
+    transform: rotate(0deg) translate(550px, 0);
+    }
+    100% {
+    transform: rotate(360deg) translate(550px, 0);
+    }
+  }
+  
+  /* Urano */
+  .urano {
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    animation: urano 10s linear infinite;
+    background-image: url("img/urano.png");
+    background-size: cover;
+  }
+  
+  #linha7{
+    width: 1320px;
+    height: 1320px;
+    position: absolute;
+    background-color: transparent;
+    opacity: 0;
+    border-radius: 50%;
+    border: 2px solid rgba(60, 196, 189, 0.498);
+  }
+  
+  
+  @keyframes urano {
+    0% {
+    transform: rotate(0deg) translate(660px, 0);
+    }
+    100% {
+    transform: rotate(360deg) translate(660px, 0);
+    }
+  }
+  
+  /* Netuno */
+  .netuno {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    animation: netuno 11s linear infinite;
+    background-image: url("img/netuno.png");
+    background-size: cover;
+  }
+    #linha8{
+        width: 1500px;
+        height: 1500px;
+        position: absolute;
+        opacity: 0;
+        background-color: transparent;
+        border-radius: 50%;
+        border: 2px solid rgba(95, 60, 251, 0.498); 
+    }  
+  
+  @keyframes netuno {
+    0% {
+    transform: rotate(0deg) translate(750px, 0);
+    }
+    100% {
+    transform: rotate(360deg) translate(750px, 0);
+    }
+  }
